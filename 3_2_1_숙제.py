@@ -23,7 +23,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 musicsss = soup.select('tr.list')
 # select를 이용해서, tr 불러오기 (tr class = 'list')
 # body > div > tbody > tr (흠.. 이거 어떻게 찾는게... 좋을까?? ㅎㅎ)
-
+# TODO: 편한 방법으로 찾는게 좋습니다!
 
 for music in musicsss:
 # musicsss (tr들) 의 반복문
@@ -36,7 +36,7 @@ for music in musicsss:
     if a_title is not None:
     # music안에 a 가 있으면 : a 의 text 를 print
     # to 멘토님 : 여기 None 자리는 항상 대문자로 써야하나요? (소문자 : 오류)
-
+    # TODO: 좋은 질문입니다! 넵 항상 대문자로 써야 합니다. https://wikidocs.net/16031 <- 이 링크 3번을 참고하세요!
         print(a_title.text.strip(), a_artist.text, a_albumtitle.text)
         # strip() :공백없애기
 
@@ -52,6 +52,7 @@ for music in musicsss:
 
 
 # to 멘토님 : rank 뽑을 때 이렇게 하는 게 맞나요? 출력이 되긴 했는데.. ㅎ
+# TODO: 어떤 식으로 하든 정답만 나오면 되는 것이죠!!
 
 
 
